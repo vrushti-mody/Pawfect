@@ -33,11 +33,31 @@
 
 ## Why Pawfect?
 
+In a world marred by 'Tyranny of choice', unsustainable discounts, similar looking mass produced products, and mechanical shopping, Pawfect is like a breath of fresh air. We bring the joy, emotions, and serendipity back in your shopping.
 
-### What we offer?
+Adapting to the perpetually changing technological and dimensional needs of the customers, Pawfect is meant to celebrate the love for dogs and our respect for those who treat their dogs well. At Pawfect, we believe that pets are family. And family deserves only the best.
+
+Our E-Commerce platform includes specialty items like treats and toys, shampoos and grooming accessories; we are also heavy into health products which include multi-vitamins and supplements for all aspects of your furry friend's health and well-being from teeth to tail. Sniff around and you'll find what you're after! Our goal has been and will continue to be to provide top quality, non prescription vet products while engaging our customers with the best customer service and prices!
 
 ## About The Project
 
+### Features
+
+Users can do the following:
+
+- Create an account, login or logout
+- Browse available products added by the admin
+- Add products to the shopping cart
+- Delete products from the shopping cart
+- Display the shopping cart
+- To checkout, a user must be logged in
+- Checkout information is processed using stripe and the payment is send to the admin
+- The profile contains all the orders a user has made
+
+Admins can do the following:
+
+- Login or logout to the admin panel
+- View all the information stored in the database. They can view/add/edit/delete orders, users, products and categories. The cart model cannot be modified by an admin because a cart is either modified by the logged in user before the purchase or deleted after the purchase.
 ### Built With
 
 This project would never have been possible without these wonderful frameworks and project.
@@ -47,6 +67,9 @@ This project would never have been possible without these wonderful frameworks a
 - [Socket.io](https://www.npmjs.com/package/socket.io)
 - [MongoDB](https://www.mongodb.com/)
 - [Stripe](https://stripe.com/)
+- [Nodemailer](https://nodemailer.com/about/)
+- [Mapbox API](https://docs.mapbox.com/api/overview/)
+- [Passport.js](http://www.passportjs.org/)
 
 <!-- GETTING STARTED -->
 
