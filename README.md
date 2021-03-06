@@ -157,6 +157,7 @@ Distributed under the MIT License. See `LICENSE.md` for more information.
 
 - Vidhi Mody <[@vidhi-mody](https://github.com/vidhi-mody), vidhimody6@gmail.com>
 - Vrushti Mody <[@vrushti-mody](https://github.com/vrushti-mody), vrushtimody6@gmail.com>
+- Soham Parekh <[@und3fined-v01d](https://github.com/und3fined-v01d), soham.parekh1998@gmail.com>
 
 Project Link: [https://github.com/vrushti-mody/Pawfect](https://github.com/vrushti-mody/Pawfect)
 
