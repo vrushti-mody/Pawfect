@@ -42,40 +42,31 @@
   </div>
   <!-- Page banner image -->
 
-  <% if(pageName == 'All Products') { %>
+  
   <div class="text-center hero-container">
     <img
       class="d-block w-100 hero-image"
-      src="/images/banner-all-products.jpg"
+      src="/images/banner-all-products.jpeg"
     />
     <div class="hero-text">
       <h1><%=pageName%></h1>
     </div>
   </div>
-  <%} else {%> <%categories.forEach( category => {%> <%if(pageName ==
-  category.title){%>
-  <div class="text-center hero-container">
-    <img
-      class="d-block w-100 hero-image"
-      src="/images/banner-<%=category.slug%>.jpg"
-    />
-    <div class="hero-text">
-      <h1><%=pageName%></h1>
-    </div>
-  </div>
-  <%}%> <%})%> <%}%>
+ 
 
   <hr class="gradient-style" />
   <!-- Contents -->
   <div class="row pl-4 pr-4">
     <% products.forEach((product) => { %>
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 product-index-box">
+      <div class="col-md-3"  >
+        <div class="product-index-box" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin: 20px; height: 480px; ">
       <div class="single-product d-flex flex-column h-100">
         <a
           class="title-link"
           href="/products/<%=product.category.slug%>/<%=product._id%>"
         >
           <img src="<%= product.imagePath %>" alt="Bag" class="img-fluid"
+          style="border:none;"
         /></a>
         <div class="product-info">
           <a
@@ -90,6 +81,7 @@
         <a
           href="/add-to-cart/<%=product._id%>"
           class="btn btn-block btn-secondary button-style mt-auto mb-2"
+          style="border-radius: 0px;"
         >
           Add to Shopping Cart
         </a>
@@ -97,12 +89,14 @@
         <a
           href="#"
           class="btn btn-block btn-danger button-style-danger mt-2 mb-2"
+          style="border-radius: 0px;"
         >
           Sold out
         </a>
         <%} %>
       </div>
     </div>
+  </div>
     <% }) %>
   </div>
 

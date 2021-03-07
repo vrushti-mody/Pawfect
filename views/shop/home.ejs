@@ -65,9 +65,10 @@
 </div>
 
 <hr class="gradient-style" />
-
+<br>
+<br>
 <!-- Latest products slider -->
-<div class="container mb-4 mt-4">
+<div class="container-fluid">
   <!--Carousel Wrapper-->
   <div
     id="products-carousel"
@@ -78,7 +79,7 @@
     <div class="controls-top mb-2">
       <div class="row">
         <div class="col-8">
-          <h3>Latest Products</h3>
+          <h3 style="margin-left: 40px;  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Latest Products</h3>
         </div>
         <div class="col-4">
           <div class="controls float-right hidden-xs">
@@ -103,8 +104,10 @@
       <!--First slide-->
       <div class="carousel-item active">
         <div class="row">
+          <br>
           <% for(let i=0; i<3; i++) { %>
-          <div class="col-md-4 product-index-box">
+            <div class="col-md-3" >
+              <div class="product-index-box" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin: 20px;">
             <div class="single-product d-flex flex-column h-100">
               <a
                 class="title-link"
@@ -114,6 +117,7 @@
                   src="<%= products[i].imagePath %>"
                   alt="Bag"
                   class="img-fluid"
+                  style="border: none;"
               /></a>
               <div class="product-info">
                 <a
@@ -128,7 +132,7 @@
               <a
                 href="/add-to-cart/<%=products[i]._id%>"
                 class="btn btn-block btn-secondary button-style mt-auto mb-2"
-                style="border-radius: none;"
+                style="border-radius: 0px;"
               >
                 Add to Shopping Cart
               </a>
@@ -136,12 +140,13 @@
               <a
                 href="#"
                 class="btn btn-block btn-danger button-style-danger mt-2 mb-2"
-                style="border-radius: none;"
+                style="border-radius: 0px;"
               >
                 Sold out
               </a>
               <%} %>
             </div>
+          </div>
           </div>
           <%}%>
         </div>
@@ -152,7 +157,8 @@
       <div class="carousel-item">
         <div class="row">
           <% for(let i=3; i<6; i++) { %>
-          <div class="col-md-4 product-index-box">
+            <div class="col-md-4">
+              <div class="product-index-box" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin: 20px;">
             <div class="single-product d-flex flex-column h-100">
               <a
                 class="title-link"
@@ -162,6 +168,7 @@
                   src="<%= products[i].imagePath %>"
                   alt="Bag"
                   class="img-fluid"
+                  style="border: none;"
               /></a>
               <div class="product-info">
                 <a
@@ -176,7 +183,7 @@
               <a
                 href="/add-to-cart/<%=products[i]._id%>"
                 class="btn btn-block btn-secondary button-style mt-auto mb-2"
-                style="border-radius: none;"
+                style="border-radius: 0px;"
               >
                 Add to Shopping Cart
               </a>
@@ -184,69 +191,24 @@
               <a
                 href="#"
                 class="btn btn-block btn-danger button-style-danger mt-2 mb-2"
-                style="border-radius: none;"
+                style="border-radius: 0px;"
               >
                 Sold out
               </a>
               <%} %>
             </div>
           </div>
+        </div>
           <%}%>
         </div>
       </div>
       <!--/.Second slide-->
 
-      <!--Third slide-->
-      <div class="carousel-item">
-        <div class="row">
-          <% for(let i=6; i<9; i++) { %>
-          <div class="col-md-4 product-index-box">
-            <div class="single-product d-flex flex-column h-100">
-              <a
-                class="title-link"
-                href="/products/<%=products[i].category.slug%>/<%=products[i]._id%>"
-              >
-                <img
-                  src="<%= products[i].imagePath %>"
-                  alt="Bag"
-                  class="img-fluid"
-              /></a>
-              <div class="product-info">
-                <a
-                  class="title-link"
-                  href="/products/<%=products[i].category.slug%>/<%=products[i]._id%>"
-                >
-                  <h6 class="mt-2 mb-2"><%= products[i].title %></h6></a
-                >
-                <div class="price">$<%= products[i].price %></div>
-              </div>
-              <% if(products[i].available) {%>
-              <a
-                href="/add-to-cart/<%=products[i]._id%>"
-                class="btn btn-block btn-secondary button-style mt-auto mb-2"
-              >
-                Add to Shopping Cart
-              </a>
-              <% } else { %>
-              <a
-                href="#"
-                class="btn btn-block btn-danger button-style-danger mt-2 mb-2"
-              >
-                Sold out
-              </a>
-              <%} %>
-            </div>
-          </div>
-          <%}%>
-        </div>
-      </div>
-      <!--/.Third slide-->
     </div>
     <!--/.Slides-->
   </div>
   <!--/.Carousel Wrapper-->
 </div>
-<div>
+  
   <%- include ../partials/footer %>
-</div>
 

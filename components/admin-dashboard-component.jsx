@@ -3,16 +3,16 @@ import styled from "styled-components";
 
 const Title = styled.h1`
   font-size: 2.5em;
-  color: #663399;
+  color: black;
   line-height: 1em;
   text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 `;
 
 const Wrapper = styled.section`
   font-family: sans-serif;
   padding: 4em;
   height: 100vh;
-  background-color: rgb(221, 221, 221);
 `;
 
 const CardWrapper = styled.div`
@@ -32,6 +32,7 @@ const Card = styled.div`
   padding: 5%;
   margin: 20px 20px;
   background: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
   .card-icon {
     display: flex;
@@ -54,7 +55,7 @@ const Dashboard = () => {
         <Title>Welcome to the Admin Panel</Title>
         <CardWrapper>
           <Card>
-            <div className="card-icon">⚙</div>
+            <div className="card-icon">👤</div>
             Login or logout to the admin panel
           </Card>
           <Card>
@@ -63,7 +64,7 @@ const Dashboard = () => {
           </Card>
           <Card>
             <div className="card-icon">📑</div>
-            Manage orders, users, products and categories.
+            Manage orders, users, products and categories
           </Card>
         </CardWrapper>
       </Wrapper>
