@@ -4,57 +4,68 @@ import styled from "styled-components";
 const Title = styled.h1`
   font-size: 2.5em;
   color: #663399;
-  font-family: 'Times New Roman';
   line-height: 1em;
   text-align: center;
 `;
 
-const Lead = styled.p`
-font-size: 1.5em;
-  color: black;
-  line-height: 1em;
-  font-family: 'Times New Roman';
-`;
-
 const Wrapper = styled.section`
+  font-family: sans-serif;
   padding: 4em;
-  background: white;
+  height: 100vh;
+  background-color: rgb(221, 221, 221);
 `;
 
-const imgStyle = {
-  width: "100%",
-  height: "30%",
-};
+const CardWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+`;
+
+const Card = styled.div`
+  font-size: 1.5rem;
+  line-height: 1.6;
+  display: inline-block;
+  text-align: center;
+  padding: 5%;
+  margin: 20px 20px;
+  background: white;
+
+  .card-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    font-size: 3rem;
+  }
+
+  &:hover {
+    border: 1px solid #4268f6;
+    box-shadow: 0 4px 12px 0 rgba(137, 138, 154, 0.4);
+  }
+`;
 
 const Dashboard = () => {
   return (
     <div>
-      <img
-        style={imgStyle}
-        src="images/banner-admin-page.jpeg"
-        alt="dashboard-head"
-      />
       <Wrapper>
         <Title>Welcome to the Admin Panel</Title>
-          <Lead>
-          <p>You can can do the following here:</p>
-      <ol>
-        <li>
-          Login or logout to the admin panel
-        </li>
-        <li>
-        View all the information stored in the database.
-        </li>
-        <li>
-        View/add/edit/delete orders, users, products and categories.
-        </li>
-        <li>
-        The cart model cannot be modified by you because a cart is either modified by the logged in user before the purchase or deleted after the purchase.
-        </li>
-      </ol>
-      </Lead>
-
-
+        <CardWrapper>
+          <Card>
+            <div className="card-icon">⚙</div>
+            Login or logout to the admin panel
+          </Card>
+          <Card>
+            <div className="card-icon">💻</div>
+            View all information stored in the database
+          </Card>
+          <Card>
+            <div className="card-icon">📑</div>
+            Manage orders, users, products and categories.
+          </Card>
+        </CardWrapper>
       </Wrapper>
     </div>
   );
